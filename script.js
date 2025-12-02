@@ -8,7 +8,7 @@ const mensagem = document.getElementById('mensagem'); // caixa de resultado
 
 // Função que retorna o texto conforme o IMC calculado
 const getText = (imc) => {
-  if (imc > 40) return 'Obesidade grau III';
+  if (imc > 40) return 'obesidade grau III';
   if (imc > 35) return 'Obesidade grau II';
   if (imc > 30) return 'Obesidade grau I';
   if (imc > 25) return 'Levemente acima do peso';
