@@ -8,20 +8,20 @@ const mensagem = document.getElementById('mensagem'); // caixa de resultado
 
 // Função que retorna o texto conforme o IMC calculado
 const getText = (imc) => {
-  if (imc > 40) return 'Obesidade grau III';
-  if (imc > 35) return 'Obesidade grau II';
-  if (imc > 30) return 'Obesidade grau I';
-  if (imc > 25) return 'Levemente acima do peso';
-  if (imc > 18.5) return 'Peso ideal';
-  return 'Abaixo do peso';
+  if (imc > 40) return 'Obesidade grau III'; // Obesidade mórbida
+  if (imc > 35) return 'Obesidade grau II'; // Obesidade severa
+  if (imc > 30) return 'Obesidade grau I'; // Obesidade moderada 
+  if (imc > 25) return 'Levemente acima do peso'; // Acima do peso
+  if (imc > 18.5) return 'Peso ideal'; // Peso normal
+  return 'Abaixo do peso'; // Abaixo do peso
 };
 
 // Função principal que faz o cálculo do IMC
 const imcCalc = () => {
   // Verifica se os campos estão preenchidos
-  if (!peso.value || !altura.value || !nome.value) {
-    mensagem.value = 'Preencha todos os campos antes de calcular!';
-    return;
+  if (!peso.value || !altura.value || !nome.value) { // Se algum campo estiver vazio
+    mensagem.value = 'Preencha todos os campos antes de calcular!'; // Mensagem de alerta
+    return; // Sai da função se algum campo estiver vazio
   }
 
   // Calcula o IMC = peso / (altura * altura)

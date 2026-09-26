@@ -66,8 +66,9 @@ input, textarea {
 
 /* Define a altura fixa do textarea e impede redimensionamento */
 textarea {
-    resize: none; 
-    height: 80px;
+    resize: center; /* Impede que o usuário redimensione o textarea */
+    height: 100px;
+    width: 100%; /* Garante que o textarea ocupe toda a largura do container */
 }
 
 /* ------------------------------
